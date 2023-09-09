@@ -12,16 +12,32 @@ int main(void)
 
 	for (tens = '0'; tens <= '9'; tens++) /*print tens place*/
 	{
-		for (ones = '0'; ones <= '9'; ones++) /*print ones place*/
+		 if (tens == '0')
+		 {
+			for (ones = '0'; ones <= '9'; ones++) /*print ones place*/
+			{
+				putchar(tens);
+				putchar(ones);
+				if (!(tens == '9' && ones == '9')) /*skip comma at end*/
+                        {
+                                putchar(',');
+                                putchar(' ');
+                        }
+			}
+		}
+		else
 		{
-			putchar(tens);
-			putchar(ones);
+			for (ones = tens +1; ones <= '9'; ones ++)
+			{
+				putchar(tens);
+				putchar(ones);
 			if (!(tens == '9' && ones == '9')) /*skip comma at end*/
 			{
 				putchar(',');
 				putchar(' ');
 			}
 		}
+	}
 	}
 	putchar('\n');
 
