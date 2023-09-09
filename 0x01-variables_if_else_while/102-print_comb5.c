@@ -16,9 +16,10 @@ int main(void)
 	{
 		for (ones = '0'; ones <= '9'; ones++)
 		{
-		 	for (t = tens; t <= '9'; t++) /*print second of pair*/
+				o = '1';
+			for (t = tens; t <= '9'; t++) /*print second of pair*/
 			{
-				for (o = ones + 1; o <= '9'; o++)
+				for ( ; o <= '9'; o++)
 				{
 					putchar(tens);
 					putchar(ones);
@@ -32,9 +33,7 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
-				}
-				o = '0';
-			}
+				}			}
 		}
 	}
 	putchar('\n');
