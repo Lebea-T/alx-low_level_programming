@@ -16,5 +16,6 @@ int main(void)
 	putchar(alphabets[count]);
 	count++;
 	}
+	putchar('\n');
 	return (0);
 }
