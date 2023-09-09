@@ -8,36 +8,22 @@
 int main(void)
 {
 	int tens;
-	int ones;
+	int ones = '0';
 
 	for (tens = '0'; tens <= '9'; tens++) /*print tens place*/
 	{
-		 if (tens == '0')
-		 {
-			for (ones = '0'; ones <= '9'; ones++) /*print ones place*/
-			{
-				putchar(tens);
-				putchar(ones);
-				if (!(tens == '9' && ones == '9')) /*skip comma at end*/
-                        {
-                                putchar(',');
-                                putchar(' ');
-                        }
-			}
-		}
-		else
+		for ( ; ones <= '9'; ones++) /*print ones place*/
 		{
-			for (ones = tens +1; ones <= '9'; ones ++)
-			{
-				putchar(tens);
-				putchar(ones);
+			putchar(tens);
+			putchar(ones);
 			if (!(tens == '9' && ones == '9')) /*skip comma at end*/
 			{
 				putchar(',');
 				putchar(' ');
 			}
-		}
-	}
+			}
+	ones = tens + 2;
+
 	}
 	putchar('\n');
 
