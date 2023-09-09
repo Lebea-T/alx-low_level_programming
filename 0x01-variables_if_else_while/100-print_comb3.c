@@ -8,11 +8,11 @@
 int main(void)
 {
 	int tens;
-	int ones = '0';
+	int ones;
 
 	for (tens = '0'; tens <= '9'; tens++) /*print tens place*/
 	{
-		for ( ; ones <= '9'; ones++) /*print ones place*/
+		for (ones = tens + 1; ones <= '9'; ones++) /*print ones place*/
 		{
 			putchar(tens);
 			putchar(ones);
@@ -22,8 +22,6 @@ int main(void)
 				putchar(' ');
 			}
 			}
-	ones = tens + 2;
-
 	}
 	putchar('\n');
 
